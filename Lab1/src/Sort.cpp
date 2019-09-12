@@ -16,7 +16,7 @@ void Sort::execute() {
     (*algorithms[algorithm_selecter])(file_vector);
     std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
 
-    double time_span_ms = chrono::duration_cast<chrono::nanoseconds>(t2 - t1).count();
+    double time_span_ms = chrono::duration_cast<chrono::microseconds>(t2 - t1).count();
     execution_time = time_span_ms;
 }
 
@@ -25,7 +25,7 @@ void Sort::select(int n) {
 }
 
 void Sort::save(string filepath) {
-    ofstream output(filepath);
+    fstream output(filepath);
     for(int i = 0; i < file_vector.size(); i++) {
         output << file_vector[i] << " ";
         if(i != 0 && i % 10 == 0)   output << endl;
@@ -34,6 +34,7 @@ void Sort::save(string filepath) {
 
 void Sort::stat() {
     if(algorithm_selecter == 0) {
+        cout << std::fixed << std::setprecision(5);
         cout << "Bubble Sort" << endl;
         cout << "Execution time: " << execution_time << " microseconds" << endl;
         cout << "Number of records analyzed: " << file_vector.size() << " elements" << endl;
@@ -47,7 +48,9 @@ void Sort::stat() {
         cout << "Insertion Sort" << endl;
         cout << "Execution time: " << execution_time << " microseconds" << endl;
         cout << "Number of records analyzed: " << file_vector.size() << " elements" << endl;
-     }
+    }
+
+    cout << endl;
 }
 
 void Sort::display() {

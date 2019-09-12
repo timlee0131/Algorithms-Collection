@@ -9,13 +9,16 @@ using namespace std;
 enum algorithm_type {BUBBLE, MERGE, LAST};
 
 int main() {
+
+
     for(int i = BUBBLE; i <= LAST; i++) {
         Sort engine;
-        engine.select(i);
-        engine.load("temp.txt");
-        engine.execute();
-        engine.stat();
-        engine.display();
+        for(int j = 0; j < 16; j++) {
+            engine.select(i);
+            engine.load(engine.data_types[j]);
+            engine.execute();
+            engine.stat();
+        }
     }
 
     return 0;

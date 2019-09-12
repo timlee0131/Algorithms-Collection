@@ -1,0 +1,191 @@
+Bubble Sort
+Execution time: 4.00000 microseconds
+Number of records analyzed: 10 elements
+
+Bubble Sort
+Execution time: 1.00000 microseconds
+Number of records analyzed: 10 elements
+
+Bubble Sort
+Execution time: 0.00000 microseconds
+Number of records analyzed: 10 elements
+
+Bubble Sort
+Execution time: 0.00000 microseconds
+Number of records analyzed: 10 elements
+
+Bubble Sort
+Execution time: 6895.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Bubble Sort
+Execution time: 7249.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Bubble Sort
+Execution time: 6483.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Bubble Sort
+Execution time: 2037.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Bubble Sort
+Execution time: 686666.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Bubble Sort
+Execution time: 672466.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Bubble Sort
+Execution time: 675518.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Bubble Sort
+Execution time: 196032.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Bubble Sort
+Execution time: 67820339.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Bubble Sort
+Execution time: 68323596.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Bubble Sort
+Execution time: 68383766.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Bubble Sort
+Execution time: 20706015.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Merge Sort
+Execution time: 1.00000 microseconds
+Number of records analyzed: 10 elements
+
+Merge Sort
+Execution time: 1.00000 microseconds
+Number of records analyzed: 10 elements
+
+Merge Sort
+Execution time: 1.00000 microseconds
+Number of records analyzed: 10 elements
+
+Merge Sort
+Execution time: 1.00000 microseconds
+Number of records analyzed: 10 elements
+
+Merge Sort
+Execution time: 173.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Merge Sort
+Execution time: 145.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Merge Sort
+Execution time: 143.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Merge Sort
+Execution time: 114.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Merge Sort
+Execution time: 2266.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Merge Sort
+Execution time: 2034.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Merge Sort
+Execution time: 2006.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Merge Sort
+Execution time: 1386.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Merge Sort
+Execution time: 23650.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Merge Sort
+Execution time: 25315.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Merge Sort
+Execution time: 24482.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Merge Sort
+Execution time: 18799.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Insertion Sort
+Execution time: 1.00000 microseconds
+Number of records analyzed: 10 elements
+
+Insertion Sort
+Execution time: 0.00000 microseconds
+Number of records analyzed: 10 elements
+
+Insertion Sort
+Execution time: 0.00000 microseconds
+Number of records analyzed: 10 elements
+
+Insertion Sort
+Execution time: 0.00000 microseconds
+Number of records analyzed: 10 elements
+
+Insertion Sort
+Execution time: 1757.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Insertion Sort
+Execution time: 1732.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Insertion Sort
+Execution time: 1895.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Insertion Sort
+Execution time: 234.00000 microseconds
+Number of records analyzed: 1000 elements
+
+Insertion Sort
+Execution time: 194318.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Insertion Sort
+Execution time: 213344.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Insertion Sort
+Execution time: 187394.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Insertion Sort
+Execution time: 17758.00000 microseconds
+Number of records analyzed: 10000 elements
+
+Insertion Sort
+Execution time: 19986539.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Insertion Sort
+Execution time: 18836859.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Insertion Sort
+Execution time: 18623167.00000 microseconds
+Number of records analyzed: 100000 elements
+
+Insertion Sort
+Execution time: 1654059.00000 microseconds
+Number of records analyzed: 100000 elements

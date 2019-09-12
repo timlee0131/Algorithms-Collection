@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <string>
 #include <chrono>
@@ -12,12 +13,6 @@ using namespace std;
 
 class Sort: public Algorithm {
 private:
-    string data_types[16] = {
-        "random_10.txt", "reversed_sorted_10.txt", "20_unique_10.txt", "30_random_10.txt",
-        "random_1000.txt", "reversed_sorted_1000.txt", "20_unique_1000.txt", "30_random_1000.txt",
-        "random_10000.txt", "reversed_sorted_10000.txt", "20_unique_10000.txt", "30_random_10000.txt",
-        "random_100000.txt", "reversed_sorted_100000.txt", "20_unique_100000.txt", "30_random_100000.txt"
-    };
     SortAlgorithm sort_algo;
     vector<int> file_vector;
     int algorithm_selecter;
@@ -32,6 +27,13 @@ public:
     void stat();
     void select(int);
     void save(string filepath);
+
+    string data_types[16] = {
+        "data_files/random_10.txt", "data_files/reversed_sorted_10.txt", "data_files/20_unique_10.txt", "data_files/30_random_10.txt",
+        "data_files/random_1000.txt", "data_files/reversed_sorted_1000.txt", "data_files/20_unique_1000.txt", "data_files/30_random_1000.txt",
+        "data_files/random_10000.txt", "data_files/reversed_sorted_10000.txt", "data_files/20_unique_10000.txt", "data_files/30_random_10000.txt",
+        "data_files/random_100000.txt", "data_files/reversed_sorted_100000.txt", "data_files/20_unique_100000.txt", "data_files/30_random_100000.txt"
+    };
 };
 
 #endif
