@@ -25,11 +25,12 @@ void Sort::select(int n) {
 }
 
 void Sort::save(string filepath) {
-    fstream output(filepath);
+    ofstream output_solution(filepath);
+    output_solution << filepath << " datasize: " << file_vector.size() << ": ";
     for(int i = 0; i < file_vector.size(); i++) {
-        output << file_vector[i] << " ";
-        if(i != 0 && i % 10 == 0)   output << endl;
-    }
+        output_solution << file_vector[i] << " ";
+        if(i != 0 && i % 10 == 0)   output_solution << endl;
+    } output_solution << endl;
 }
 
 void Sort::stat() {
