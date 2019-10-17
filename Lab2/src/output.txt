@@ -1,0 +1,693 @@
+DFS iterative (list)
+Number of nodes: 5
+total cost/distance: 5
+execution time: 53
+BFS iterative (list)
+Number of nodes: 11
+total cost/distance: 14
+execution time: 18
+DFS iterative (matrix)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 12
+BFS iterative (matrix)
+Number of nodes: 12
+total cost/distance: 0
+execution time: 106
+DFS recursive (list)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 14
+BFS recursive (list)
+Number of nodes: 8
+total cost/distance: 0
+execution time: 13
+DFS recursive (matrix)
+Number of nodes: 8
+total cost/distance: 0
+execution time: 17
+BFS recursive (matrix)
+Number of nodes: 24
+total cost/distance: 0
+execution time: 33
+Dijkstra (list)
+Number of nodes: 4
+total cost/distance: 4
+execution time: 26
+Dijkstra (matrix)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 4
+total cost/distance: 4
+execution time: 26
+Dijkstra (matrix)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 16
+44
+S iterative (list)
+Number of nodes: 14
+total cost/distance: 19
+execution time: 17
+BFS iterative (list)
+Number of nodes: 5
+total cost/distance: 5
+execution time: 15
+DFS iterative (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 9
+BFS iterative (matrix)
+Number of nodes: 5
+total cost/distance: 0
+execution time: 31
+DFS recursive (list)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 13
+BFS recursive (list)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 12
+DFS recursive (matrix)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 12
+BFS recursive (matrix)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 20
+Dijkstra (list)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 29
+Dijkstra (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 14
+Dijkstra (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 28
+Dijkstra (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 15
+DFS iterative (list)
+Number of nodes: 9
+total cost/distance: 9
+execution time: 16
+BFS iterative (list)
+Number of nodes: 14
+total cost/distance: 17
+execution time: 15
+DFS iterative (matrix)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 23
+BFS iterative (matrix)
+Number of nodes: 13
+total cost/distance: 0
+execution time: 58
+DFS recursive (list)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 19
+BFS recursive (list)
+Number of nodes: 8
+total cost/distance: 0
+execution time: 19
+DFS recursive (matrix)
+Number of nodes: 20
+total cost/distance: 0
+execution time: 44
+BFS recursive (matrix)
+Number of nodes: 26
+total cost/distance: 0
+execution time: 58
+Dijkstra (list)
+Number of nodes: 6
+total cost/distance: 6
+execution time: 32
+Dijkstra (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 22
+Dijkstra (matrix)
+Number of nodes: 6
+total cost/distance: 6
+execution time: 20
+Dijkstra (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 20
+DFS iterative (list)
+Number of nodes: 12
+total cost/distance: 15
+execution time: 12
+BFS iterative (list)
+Number of nodes: 7
+total cost/distance: 7
+execution time: 12
+DFS iterative (matrix)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 13
+BFS iterative (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 21
+DFS recursive (list)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 6
+BFS recursive (list)
+Number of nodes: 3
+total cost/distance: 0
+execution time: 5
+DFS recursive (matrix)
+Number of nodes: 20
+total cost/distance: 0
+execution time: 25
+BFS recursive (matrix)
+Number of nodes: 12
+total cost/distance: 0
+execution time: 15
+Dijkstra (list)
+Number of nodes: 17
+total cost/distance: 21
+execution time: 19
+Dijkstra (matrix)
+Number of nodes: 15
+total cost/distance: 0
+execution time: 47
+Dijkstra (matrix)
+Number of nodes: 17
+total cost/distance: 21
+execution time: 19
+Dijkstra (matrix)
+Number of nodes: 15
+total cost/distance: 0
+execution time: 44
+DFS iterative (list)
+Number of nodes: 14
+total cost/distance: 18
+execution time: 12
+BFS iterative (list)
+Number of nodes: 17
+total cost/distance: 24
+execution time: 12
+DFS iterative (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 9
+BFS iterative (matrix)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 22
+DFS recursive (list)
+Number of nodes: 11
+total cost/distance: 0
+execution time: 14
+BFS recursive (list)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 14
+DFS recursive (matrix)
+Number of nodes: 12
+total cost/distance: 0
+execution time: 19
+BFS recursive (matrix)
+Number of nodes: 32
+total cost/distance: 0
+execution time: 55
+Dijkstra (list)
+Number of nodes: 6
+total cost/distance: 6
+execution time: 23
+Dijkstra (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 23
+Dijkstra (matrix)
+Number of nodes: 6
+total cost/distance: 6
+execution time: 31
+Dijkstra (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 20
+DFS iterative (list)
+Number of nodes: 14
+total cost/distance: 19
+execution time: 12
+BFS iterative (list)
+Number of nodes: 17
+total cost/distance: 27
+execution time: 12
+DFS iterative (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 9
+BFS iterative (matrix)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 23
+DFS recursive (list)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 13
+BFS recursive (list)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 12
+DFS recursive (matrix)
+Number of nodes: 14
+total cost/distance: 0
+execution time: 17
+BFS recursive (matrix)
+Number of nodes: 32
+total cost/distance: 0
+execution time: 40
+Dijkstra (list)
+Number of nodes: 7
+total cost/distance: 8
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 19
+Dijkstra (matrix)
+Number of nodes: 7
+total cost/distance: 8
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 20
+DFS iterative (list)
+Number of nodes: 0
+total cost/distance: 0
+execution time: 11
+BFS iterative (list)
+Number of nodes: 0
+total cost/distance: 0
+execution time: 11
+DFS iterative (matrix)
+Number of nodes: 0
+total cost/distance: 0
+execution time: 23
+BFS iterative (matrix)
+Number of nodes: 0
+total cost/distance: 0
+execution time: 22
+cution time: 22
+DFS recursive (list)
+Number of nodes: 5
+total cost/distance: 0
+execution time: 7
+BFS recursive (list)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 6
+DFS recursive (matrix)
+Number of nodes: 24
+total cost/distance: 0
+execution time: 28
+BFS recursive (matrix)
+Number of nodes: 14
+total cost/distance: 0
+execution time: 17
+Dijkstra (list)
+Number of nodes: 23
+total cost/distance: 29
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 54
+Dijkstra (matrix)
+Number of nodes: 23
+total cost/distance: 29
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 57
+DFS iterative (list)
+Number of nodes: 4
+total cost/distance: 4
+execution time: 13
+BFS iterative (list)
+Number of nodes: 7
+total cost/distance: 8
+execution time: 12
+DFS iterative (matrix)
+Number of nodes: 3
+total cost/distance: 0
+execution time: 8
+BFS iterative (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 29
+DFS recursive (list)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 23
+BFS recursive (list)
+Number of nodes: 15
+total cost/distance: 0
+execution time: 25
+DFS recursive (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 11
+BFS recursive (matrix)
+Number of nodes: 12
+total cost/distance: 0
+execution time: 41
+Dijkstra (list)
+Number of nodes: 3
+total cost/distance: 2
+execution time: 48
+Dijkstra (matrix)
+Number of nodes: 3
+total cost/distance: 0
+execution time: 16
+Dijkstra (matrix)
+Number of nodes: 3
+total cost/distance: 2
+execution time: 26
+Dijkstra (matrix)
+Number of nodes: 3
+total cost/distance: 0
+execution time: 11
+DFS iterative (list)
+Number of nodes: 8
+total cost/distance: 9
+execution time: 14
+BFS iterative (list)
+Number of nodes: 15
+total cost/distance: 20
+execution time: 12
+DFS iterative (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 13
+BFS iterative (matrix)
+Number of nodes: 14
+total cost/distance: 0
+execution time: 22
+DFS recursive (list)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 13
+BFS recursive (list)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 12
+DFS recursive (matrix)
+Number of nodes: 14
+total cost/distance: 0
+execution time: 17
+BFS recursive (matrix)
+Number of nodes: 28
+total cost/distance: 0
+execution time: 33
+Dijkstra (list)
+Number of nodes: 12
+total cost/distance: 13
+execution time: 20
+Dijkstra (matrix)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 32
+Dijkstra (matrix)
+Number of nodes: 12
+total cost/distance: 13
+execution time: 20
+Dijkstra (matrix)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 31
+DFS iterative (list)
+Number of nodes: 16
+total cost/distance: 21
+execution time: 12
+BFS iterative (list)
+Number of nodes: 4
+total cost/distance: 3
+execution time: 11
+DFS iterative (matrix)
+Number of nodes: 15
+total cost/distance: 0
+execution time: 15
+BFS iterative (matrix)
+Number of nodes: 3
+total cost/distance: 0
+execution time: 34
+DFS recursive (list)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 13
+BFS recursive (list)
+Number of nodes: 8
+total cost/distance: 0
+execution time: 11
+DFS recursive (matrix)
+Number of nodes: 30
+total cost/distance: 0
+execution time: 41
+BFS recursive (matrix)
+Number of nodes: 6
+total cost/distance: 0
+execution time: 10
+Dijkstra (list)
+Number of nodes: 7
+total cost/distance: 6
+execution time: 18
+Dijkstra (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 20
+Dijkstra (matrix)
+Number of nodes: 7
+total cost/distance: 6
+execution time: 17
+Dijkstra (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 27
+ iterative (list)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 13
+BFS iterative (list)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 11
+DFS iterative (matrix)
+Number of nodes: 0
+total cost/distance: 0
+execution time: 2
+BFS iterative (matrix)
+Number of nodes: 0
+total cost/distance: 0
+execution time: 2
+DFS recursive (list)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 4
+BFS recursive (list)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 3
+DFS recursive (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 5
+BFS recursive (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 5
+Dijkstra (list)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 20
+Dijkstra (matrix)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 4
+Dijkstra (matrix)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 20
+Dijkstra (matrix)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 3
+DFS iterative (list)
+Number of nodes: 12
+total cost/distance: 16
+execution time: 12
+BFS iterative (list)
+Number of nodes: 6
+total cost/distance: 6
+execution time: 11
+DFS iterative (matrix)
+Number of nodes: 11
+total cost/distance: 0
+execution time: 14
+BFS iterative (matrix)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 24
+nce: 0
+execution time: 29
+DFS recursive (list)
+Number of nodes: 5
+total cost/distance: 0
+execution time: 7
+BFS recursive (list)
+Number of nodes: 4
+total cost/distance: 0
+execution time: 6
+DFS recursive (matrix)
+Number of nodes: 20
+total cost/distance: 0
+execution time: 23
+BFS recursive (matrix)
+Number of nodes: 24
+total cost/distance: 0
+execution time: 31
+Dijkstra (list)
+Number of nodes: 18
+total cost/distance: 26
+execution time: 19
+Dijkstra (matrix)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 51
+Dijkstra (matrix)
+Number of nodes: 18
+total cost/distance: 26
+execution time: 19
+Dijkstra (matrix)
+Number of nodes: 16
+total cost/distance: 0
+execution time: 49
+DFS iterative (list)
+Number of nodes: 15
+total cost/distance: 20
+execution time: 12
+BFS iterative (list)
+Number of nodes: 9
+total cost/distance: 11
+execution time: 11
+DFS iterative (matrix)
+Number of nodes: 14
+total cost/distance: 0
+execution time: 16
+BFS iterative (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 23
+2
+DFS recursive (list)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 4
+BFS recursive (list)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 5
+DFS recursive (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 9
+BFS recursive (matrix)
+Number of nodes: 2
+total cost/distance: 0
+execution time: 9
+Dijkstra (list)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 30
+Dijkstra (matrix)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 5
+Dijkstra (matrix)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 1
+total cost/distance: 0
+execution time: 7
+DFS iterative (list)
+Number of nodes: 8
+total cost/distance: 8
+execution time: 14
+BFS iterative (list)
+Number of nodes: 13
+total cost/distance: 14
+execution time: 12
+DFS iterative (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 11
+BFS iterative (matrix)
+Number of nodes: 12
+total cost/distance: 0
+execution time: 21
+DFS recursive (list)
+Number of nodes: 12
+total cost/distance: 0
+execution time: 16
+BFS recursive (list)
+Number of nodes: 11
+total cost/distance: 0
+execution time: 17
+DFS recursive (matrix)
+Number of nodes: 14
+total cost/distance: 0
+execution time: 20
+BFS recursive (matrix)
+Number of nodes: 24
+total cost/distance: 0
+execution time: 30
+Dijkstra (list)
+Number of nodes: 10
+total cost/distance: 13
+execution time: 21
+Dijkstra (matrix)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 39
+Dijkstra (matrix)
+Number of nodes: 10
+total cost/distance: 13
+execution time: 79
+Dijkstra (matrix)
+Number of nodes: 10
+total cost/distance: 0
+execution time: 37
+DFS iterative (list)
+Number of nodes: 13
+total cost/distance: 17
+execution time: 16
+BFS iterative (list)
+Number of nodes: 8
+total cost/distance: 8
+execution time: 13
+DFS iterative (matrix)
+Number of nodes: 9
+total cost/distance: 0
+execution time: 14
+BFS iterative (matrix)
+Number of nodes: 7
+total cost/distance: 0
+execution time: 23

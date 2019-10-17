@@ -89,7 +89,7 @@ void SearchAlgorithm::dfs_i_m(int src, int dest) {
             //     cout << path[i].node << " ";
             // }   cout << endl;
             dfs_iterative_matrix = path;
-            break;
+            return;
         }
         path.push_back(matrix.find(last).get_data());
 
@@ -183,7 +183,6 @@ void SearchAlgorithm::bfs_i_m(int src, int dest) {
             //     cout << path[i].node << " ";
             // }   cout << endl;
             bfs_iterative_matrix = path;
-            break;
         }
         path.push_back(matrix.find(last).get_data());
 
@@ -197,7 +196,7 @@ void SearchAlgorithm::bfs_i_m(int src, int dest) {
         }
     }
     cout << endl;
-    delete [] visited;
+    //delete [] visited;
     return;
 }
 
@@ -208,10 +207,14 @@ void SearchAlgorithm::dfs_r_l(int src, int dest) {
     queue<data_box> queue;
     vector<data_box> path;
 
-    bool* visited = new bool[list.get_size() ];
+    bool* visited = new bool[list.get_size()];
+    for(int i = 0; i <= list.get_size(); i++) {
+        visited[i] = false;
+    }
+    visited[src] = true;
     path.push_back(box1);
     dfs_r_l_recursion(box1, box2, visited, path);
-    //delete [] visited;
+    delete [] visited;
 }
 
 void SearchAlgorithm::dfs_r_l_recursion(data_box d1, data_box d2, bool* visited, vector<data_box> path) {
@@ -236,8 +239,13 @@ void SearchAlgorithm::dfs_r_l_recursion(data_box d1, data_box d2, bool* visited,
         }
         curr = curr -> get_next();
     }
-    return dfs_r_l_recursion(list.find(d1) ->get_next() ->get_data(), d2, visited, path);
+
     visited[d1.node] = false;
+    if(list.find(d1) -> get_next() != nullptr) {
+        return dfs_r_l_recursion(list.find(d1) ->get_next() ->get_data(), d2, visited, path);
+    } else {
+        return;
+    }
 }
 
 void SearchAlgorithm::bfs_r_l(int src, int dest) {
@@ -247,10 +255,14 @@ void SearchAlgorithm::bfs_r_l(int src, int dest) {
     stack<data_box> stack;
     vector<data_box> path;
 
-    bool* visited = new bool[list.get_size() ];
+    bool* visited = new bool[list.get_size()];
+    for(int i = 0; i <= list.get_size(); i++) {
+        visited[i] = false;
+    }
+    visited[src] = true;
     path.push_back(box1);
     bfs_r_l_recursion(box1, box2, visited, path);
-    //delete [] visited;
+    delete [] visited;
 }
 
 void SearchAlgorithm::bfs_r_l_recursion(data_box d1, data_box d2, bool* visited, vector<data_box> path) {
@@ -274,8 +286,13 @@ void SearchAlgorithm::bfs_r_l_recursion(data_box d1, data_box d2, bool* visited,
         }
         curr = curr -> get_next();
     }
-    return bfs_r_l_recursion(list.find(d1) ->get_next() ->get_data(), d2, visited, path);
+    // return bfs_r_l_recursion(list.find(d1) ->get_next() ->get_data(), d2, visited, path);
     visited[d1.node] = false;
+    if(list.find(d1) -> get_next() != nullptr) {
+        return dfs_r_l_recursion(list.find(d1) ->get_next() ->get_data(), d2, visited, path);
+    } else {
+        return;
+    }
 }
 
 void SearchAlgorithm::dfs_r_m(int src, int dest) {
@@ -284,7 +301,7 @@ void SearchAlgorithm::dfs_r_m(int src, int dest) {
     box2.node = dest;
     stack<data_box> stack;
     vector<data_box> path;
-    bool* visited = new bool[matrix.get_vertices()];
+    bool* visited = new bool[matrix.get_vertices() + 1];
     for(int i = 0; i < matrix.get_vertices(); i++) {
         visited[i] = false;
     }
@@ -292,7 +309,7 @@ void SearchAlgorithm::dfs_r_m(int src, int dest) {
     path.push_back(box1);
     stack.push(box1);
     dfs_r_m_recursion(box1, box2, stack, visited, path);
-    //delete [] visited;
+    delete [] visited;
 }
 
 void SearchAlgorithm::dfs_r_m_recursion(data_box d1, data_box d2, stack<data_box>& stack, bool* visited, vector<data_box> path) {
@@ -329,7 +346,7 @@ void SearchAlgorithm::bfs_r_m(int src, int dest) {
     box2.node = dest;
     queue<data_box> queue;
     vector<data_box> path;
-    bool* visited = new bool[matrix.get_vertices()];
+    bool* visited = new bool[matrix.get_vertices() + 1];
     for(int i = 0; i < matrix.get_vertices(); i++) {
         visited[i] = false;
     }
@@ -338,7 +355,7 @@ void SearchAlgorithm::bfs_r_m(int src, int dest) {
     path.push_back(box1); 
     queue.push(box1);
     bfs_r_m_recursion(box1, box2, queue, visited, path);
-    //delete [] visited;
+    delete [] visited;
 }
 
 void SearchAlgorithm::bfs_r_m_recursion(data_box d1, data_box d2, queue<data_box>& queue, bool* visited, vector<data_box> path) {
@@ -434,6 +451,7 @@ void SearchAlgorithm::dijkstra_m(int src, int dest) {
             //     cout << path[i].node << " ";
             // }   cout << endl;
             dijkstra_matrix = path;
+            return;
         }
 
         path.push_back(last);
@@ -463,62 +481,88 @@ double SearchAlgorithm::get_heuristic(data_box src, data_box curr) {
     return g;
 }
 
-vector<data_box> SearchAlgorithm::a_star_l(int src, int dest) {
+void SearchAlgorithm::a_star_l(int src, int dest) {
     data_box box1, box2;
     box1.node = src;
     box2.node = dest;
     vector<data_box> path;
-    vector<node> openlist, closedlist;
-    node s;
-    s.box = list.find(box1) ->get_data();
 
-    openlist.push_back(s);
+    priority_queue<data_box> pq;
+    vector<int> dist (list.get_size(), INF);
+    pq.push(box1);
+    dist[src] = 0;
 
-    while(!openlist.empty()) {
-        int pos;
-        for(int i = 0; i < openlist.size(); i++) {
-            if(s.g + s.h >= openlist[i].g + openlist[i].h) {
-                s = openlist[i];
-                pos = i;
-            }
-            openlist.erase(openlist.begin() + pos);
+    while(!pq.empty()) {
+        data_box last = pq.top();
+        pq.pop();
+
+        if(last.node == dest) {
+            path.push_back(box2);
+            // cout << "dijkstra list: ";
+            // for(int i = 0; i < path.size(); i++) {
+            //     cout << path[i].node << " ";
+            // }   cout << endl;
+            a_star_list = path;
         }
 
-        ds_node<data_box>* curr = list.find(s.box) ->get_edges().get_head();
+        path.push_back(last);
+
+        ds_node<data_box>* curr = list.find(last) -> get_edges().get_head();
         while(curr != nullptr) {
-            node node_curr;
-            node_curr.box = curr -> get_data();
-            node_curr.parent = list.find(s.box) -> get_data();
-
-            if(node_curr.box.node == dest) {
-                cout << "a star list: ";
-                for(int i = 0; i < path.size(); i++) {
-                    cout << path[i].node << " ";
-                }   cout << endl;
-                break;
+            int v_label = curr -> get_data().node;
+            int weight_label = curr -> get_data().weight;
+            
+            if(dist[v_label] > dist[last.node] + weight_label) {
+                dist[v_label] = dist[last.node] + weight_label;
+                pq.push(curr -> get_data());
             }
-            node_curr.g = s.g + get_heuristic(s.box, node_curr.box);
-            node_curr.h = get_heuristic(node_curr.box, list.find(box2) -> get_data());
-            node_curr.f = node_curr.g + node_curr.h;
-
-            for(int i = 0; i < openlist.size(); i++) {
-                if(openlist[i].g == node_curr.g && openlist[i].f <= node_curr.f)
-                    continue;
-            }
-
-            for(int i = 0; i < closedlist.size(); i++) {
-                if(closedlist[i].g == node_curr.g) {
-                    if(closedlist[i].f <= node_curr.f)
-                        continue;
-                    else
-                        openlist.push_back(closedlist[i]);
-                }
-            }
-
-            path.push_back(node_curr.box);
             curr = curr -> get_next();
         }
-        closedlist.push_back(s);
     }
-    return path;
+
+    return;
+}
+
+void  SearchAlgorithm::a_star_m(int src, int dest) {
+    data_box box1, box2;
+    box1.node = src;
+    box2.node = dest;
+    vector<data_box> path;
+
+    priority_queue<data_box> pq;
+    vector<int> dist (matrix.get_vertices(), INF);
+    pq.push(box1);
+    dist[src] = 0;
+
+    while(!pq.empty()) {
+        data_box last = pq.top();
+        pq.pop();
+
+        if(last.node == dest) {
+            path.push_back(box2);
+            // cout << "dijkstra matrix: ";
+            // for(int i = 0; i < path.size(); i++) {
+            //     cout << path[i].node << " ";
+            // }   cout << endl;
+            a_star_matrix = path;
+            return;
+        }
+
+        path.push_back(last);
+
+        for(int i = 0; i < matrix.get_vertices(); i++) {
+            if(matrix.edge_exists(last.node, i) ) {
+                data_box box3;
+                box3.node = i;
+                int v_label = i;
+                int weight_label = matrix.find(box3).get_data().weight;
+
+                if(dist[v_label] > dist[last.node] + weight_label) {
+                    dist[v_label] = dist[last.node] + weight_label;
+                    pq.push(matrix.find(box3).get_data());
+                }
+            }
+        }        
+    }
+    return;
 }

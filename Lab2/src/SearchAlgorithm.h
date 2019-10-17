@@ -52,15 +52,15 @@ public:
     void bfs_r_m_recursion(data_box, data_box,queue<data_box>&, bool*, vector<data_box>);
 
     void dijkstra_l(int, int);
-    vector<data_box> a_star_l(int, int);
+    void a_star_l(int, int);
 
     void dijkstra_m(int, int);
-    vector<data_box> a_star_m(int, int);
+    void a_star_m(int, int);
 
     double get_heuristic(data_box, data_box);
 
     void display();
-    vector<data_box> dfs_iterative_list, bfs_iterative_list, dfs_iterative_matrix, bfs_iterative_matrix, dijkstra_list, dijkstra_matrix;
+    vector<data_box> dfs_iterative_list, bfs_iterative_list, dfs_iterative_matrix, bfs_iterative_matrix, dijkstra_list, dijkstra_matrix, a_star_list, a_star_matrix;
     vector<data_box> dfs_recursive_list, bfs_recursive_list;
     vector<data_box> dfs_recursive_matrix, bfs_recursive_matrix;
 private:

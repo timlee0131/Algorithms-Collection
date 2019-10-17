@@ -6,19 +6,27 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     Search s;
+    fstream output("output.txt");
     srand(time(NULL));
     for(int i = 0; i < 10; i++) {
-        int source = rand() % 50;
-        int destination = rand() % 50;
-        for(int i = 0; i < 10; i++) {
+        int source = rand() % 15;
+        int destination = rand() % 15;
+
+        cout << "src: " << source << endl;
+        cout << "dest: " << destination << endl;
+        for(int j = 0; j < 12; j++) {
             s.load();
-            s.select(i);
+            s.select(j);
             //s.execute(atoi(argv[1]), atoi(argv[2]));
             s.execute(source, destination);
             s.stat();
-            s.save();
+            //s.save(output);
         }
+        cout << endl << endl << endl;
+        cout << "LOOPNUMBER: " << i << endl;
+        cout << endl << endl;
     }
+    s.format_report_matrix();
 
     return 0;
 }

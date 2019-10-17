@@ -17,7 +17,7 @@ public:
     virtual void display() = 0;
     virtual void stat() = 0;
     virtual void select(int) = 0;
-    virtual void save(std::string) = 0;
+    virtual void save(std::fstream&) = 0;
 };
 
 #endif
