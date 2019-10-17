@@ -1,8 +1,8 @@
 #ifndef SEARCH_ALGORITHM
 #define SEARCH_ALGORITHM
 
-#include <fstream>
-#include <iostream>
+//#include <fstream>
+//#include <iostream>
 #include <vector>
 #include <stack>
 #include <queue>
@@ -22,40 +22,51 @@ using namespace std;
         o Perform search over both adjacency list and adjacency matrix forms of 
 */
 
+struct node {
+    data_box box;
+    data_box parent;
+    double g = 0.0;
+    double h = 0.0;
+    double f = 0.0;
+};
+
 class SearchAlgorithm {
 public:
-    SearchAlgorithm(int, int, string, string, string);      //Constructor should initialize src and dest,
+    SearchAlgorithm() {};
+    SearchAlgorithm(string, string, string);      //Constructor should initialize src and dest,
                                                             //Also initialize command line arguments.
     //Algorithms
-    vector<data_box> dfs_i_l();
-    vector<data_box> bfs_i_l();
-    vector<data_box> dfs_i_m();
-    vector<data_box> bfs_i_m();
+    void dfs_i_l(int, int);
+    void bfs_i_l(int, int);
+    void dfs_i_m(int, int);
+    void bfs_i_m(int, int);
 
-    void dfs_r_l();
+    void dfs_r_l(int, int);
     void dfs_r_l_recursion(data_box, data_box, bool*, vector<data_box>);
-    void bfs_r_l();
+    void bfs_r_l(int, int);
     void bfs_r_l_recursion(data_box, data_box, bool*, vector<data_box>);
 
-    void dfs_r_m();
-    void dfs_r_m_recursion(stack<data_box>&, bool*, vector<data_box>);
-    void bfs_r_m();
-    void bfs_r_m_recursion(queue<data_box>&, bool*, vector<data_box>);
+    void dfs_r_m(int, int);
+    void dfs_r_m_recursion(data_box, data_box,stack<data_box>&, bool*, vector<data_box>);
+    void bfs_r_m(int, int);
+    void bfs_r_m_recursion(data_box, data_box,queue<data_box>&, bool*, vector<data_box>);
 
-    vector<data_box> dijkstra_l();
-    vector<data_box> a_star_l();
+    void dijkstra_l(int, int);
+    vector<data_box> a_star_l(int, int);
 
-    vector<data_box> dijkstra_m();
-    vector<data_box> a_star_m();
+    void dijkstra_m(int, int);
+    vector<data_box> a_star_m(int, int);
+
+    double get_heuristic(data_box, data_box);
 
     void display();
+    vector<data_box> dfs_iterative_list, bfs_iterative_list, dfs_iterative_matrix, bfs_iterative_matrix, dijkstra_list, dijkstra_matrix;
+    vector<data_box> dfs_recursive_list, bfs_recursive_list;
+    vector<data_box> dfs_recursive_matrix, bfs_recursive_matrix;
 private:
-    int src, dest;
     ds_adjlist<data_box> list;
     ds_adjmatrix<data_box> matrix;
     parse_process pp;
-    vector<data_box> dfs_recursive_list, bfs_recursive_list;
-    vector<data_box> dfs_recursive_matrix, bfs_recursive_matrix;
 };
 
 #endif

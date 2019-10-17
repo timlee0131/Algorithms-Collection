@@ -12,8 +12,8 @@
 
 class Algorithm {
 public:
-    virtual void load(std::string) = 0;
-    virtual void execute() = 0;
+    virtual void load() = 0;
+    virtual void execute(int, int) = 0;
     virtual void display() = 0;
     virtual void stat() = 0;
     virtual void select(int) = 0;

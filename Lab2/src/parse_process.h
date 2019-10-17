@@ -17,6 +17,16 @@ struct data_box {
         if(d1.node == d2.node)      return true;
         else                        return false;
     }
+
+    friend bool operator<(data_box& d1, data_box& d2) {
+        if(d1.node < d2.node)   return true;
+        else                    return false;
+    }
+
+    friend bool operator<(const data_box& d1, const data_box& d2) {
+        if(d1.node < d2.node)   return true;
+        else                    return false;
+    }
 };
 
 class parse_process {
