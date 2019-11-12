@@ -33,7 +33,7 @@ private:
     double exe_time;
 public:
     //Constructor
-    tsp_dp();
+    tsp_dp(char*);
     
     //Pure virtual implementations
     virtual void run_tsp();

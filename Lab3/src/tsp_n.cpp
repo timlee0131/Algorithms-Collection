@@ -3,8 +3,7 @@
 
 const int DIST_MAX = 9999999;
 
-tsp_n::tsp_n() {
-    char* input = "datafiles/positions.txt";
+tsp_n::tsp_n(char* input) {
     p = pp_singleton::pp_instance(input);
     tsp_list = p -> return_interface() -> return_it();
 

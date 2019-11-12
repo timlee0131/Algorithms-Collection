@@ -7,13 +7,14 @@
 //#include "tsp.h"
 
 int main () {
-    tsp_interface* k = new tsp_dp();
+    char* input = "datafiles/positions.txt";
+    tsp_interface* k = new tsp_dp(input);
     k -> run_tsp();
     k -> display();
 
-    // k = new tsp_n();
-    // k -> run_tsp();
-    // k -> display();
+    k = new tsp_n(input);
+    k -> run_tsp();
+    k -> display();
 
     return 0;
 }
