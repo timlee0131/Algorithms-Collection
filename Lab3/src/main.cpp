@@ -7,7 +7,7 @@
 //#include "tsp.h"
 
 int main () {
-    char* input = "datafiles/positions.txt";
+    char* input = "datafiles/positions.txt";    //When testing against private list of nodes, change this value.
     tsp_interface* k = new tsp_dp(input);
     k -> run_tsp();
     k -> display();
