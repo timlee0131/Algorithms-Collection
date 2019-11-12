@@ -35,6 +35,7 @@ void parse_process::load(char* filename) {
 }
 
 void parse_process::output(std::ofstream& write, std::vector<tsp_node> solution_list_dp, int flag, double exe_time) {
+    write << "size: " << solution_list_dp.size() - 1 << std::endl;
     if(flag == 0)
         write << "DP: ";
     else if(flag == 1)
@@ -43,7 +44,7 @@ void parse_process::output(std::ofstream& write, std::vector<tsp_node> solution_
         if(i != solution_list_dp.size() - 1)
             write << solution_list_dp[i].get_nodeID() << " -> ";
         else {
-            write << solution_list_dp[i].get_nodeID() << "\tTime(sec): " << exe_time << std::endl;
+            write << solution_list_dp[i].get_nodeID() << "\tTime(microsec): " << exe_time << std::endl;
         }
     }
     

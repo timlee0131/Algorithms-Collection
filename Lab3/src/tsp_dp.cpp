@@ -26,9 +26,9 @@ void tsp_dp::run_tsp() {
     auto start_time = std::chrono::high_resolution_clock::now();
     solve_dp();
     auto end_time = std::chrono::high_resolution_clock::now();
-    std::cout << "Execution time for Held-Karp TSP with size " << size << " : " << std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    std::cout << "Execution time for Held-Karp TSP with size " << size << " : " << std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
     std::cout  << " seconds."<< std::endl;
-    exe_time = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    exe_time = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
 
     dp_solution_helper();
     output();

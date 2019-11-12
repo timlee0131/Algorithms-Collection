@@ -15,9 +15,9 @@ void tsp_n::run_tsp() {
     auto start_time = std::chrono::high_resolution_clock::now();
     brute_force_wrap();
     auto end_time = std::chrono::high_resolution_clock::now();
-    std::cout << "Execution time for Naive TSP with size " << size << " : " << std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    std::cout << "Execution time for Naive TSP with size " << size << " : " << std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
     std::cout  << " seconds."<< std::endl;
-    exe_time = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    exe_time = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
     output();
 }
 

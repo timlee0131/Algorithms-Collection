@@ -11,9 +11,9 @@ int main () {
     k -> run_tsp();
     k -> display();
 
-    k = new tsp_n();
-    k -> run_tsp();
-    k -> display();
+    // k = new tsp_n();
+    // k -> run_tsp();
+    // k -> display();
 
     return 0;
 }
