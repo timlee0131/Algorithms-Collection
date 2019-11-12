@@ -7,9 +7,13 @@
 //#include "tsp.h"
 
 int main () {
-    tsp_interface* t = new tsp_n();
-    t -> run_tsp();
-    t -> display();
+    tsp_interface* k = new tsp_dp();
+    k -> run_tsp();
+    k -> display();
+
+    k = new tsp_n();
+    k -> run_tsp();
+    k -> display();
 
     return 0;
 }

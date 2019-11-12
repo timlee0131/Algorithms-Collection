@@ -11,7 +11,7 @@ private:
 public:
     //Pure virtual implementations
     virtual void load(char*);
-    virtual void output(char*);
+    virtual void output(std::ofstream&, std::vector<tsp_node>, int, double);
 
     //Class utility functions
     std::vector<tsp_node> return_it();

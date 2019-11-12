@@ -3,24 +3,35 @@
 const int DIST_MAX = 9999999;
 
 tsp_dp::tsp_dp() {
-    //Constructor for TSP class. Take in parse_process
     char* input = "datafiles/positions.txt";
-    file_io* pp = new parse_process();
-    pp -> load(input);
-    tsp_list = pp -> return_it();
-    size = pp -> return_it().size();
+    p = pp_singleton::pp_instance(input);
+    tsp_list = p ->return_interface() ->return_it();
+
+    size = tsp_list.size();
+
     N = size;
 
     fill_distance();
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++) {
-            std::cout << distance[i][j] << "\t";
-        }   std::cout << std::endl;
-    }
-}
 
+    //Un-comment this block to print the euclidean weight distribution matrix.
+
+    // for(int i = 0; i < size; i++) {
+    //     for(int j = 0; j < size; j++) {
+    //         std::cout << distance[i][j] << "\t";
+    //     }   std::cout << std::endl;
+    // }
+}
+ 
 void tsp_dp::run_tsp() {
+    auto start_time = std::chrono::high_resolution_clock::now();
     solve_dp();
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::cout << "Execution time for Held-Karp TSP with size " << size << " : " << std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    std::cout  << " seconds."<< std::endl;
+    exe_time = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+
+    dp_solution_helper();
+    output();
 }
 
 double tsp_dp::euclidian_distance(tsp_node node1, tsp_node node2) {
@@ -28,6 +39,7 @@ double tsp_dp::euclidian_distance(tsp_node node1, tsp_node node2) {
 }   //This euclidian_distance function is used for the DP TSP
 
 void tsp_dp::fill_distance() {
+    //This function populates the weight distribution matrix with 3D euclidean coordinates
     distance = new double*[size];
     for(int i = 0; i < size; i++) {
         distance[i] = new double[size];
@@ -128,7 +140,6 @@ void tsp_dp::solve_dp() {
 }
 
 void tsp_dp::dp_solution_helper() {
-    //std::reverse(tour.begin(), tour.end());
     for(int i = 0; i < tour.size(); i++) {
         solution_list_dp.push_back(tsp_list[tour[i]]);
     }
@@ -146,5 +157,9 @@ void tsp_dp::display_dp() {
         else
             std::cout << solution_list_dp[i].get_nodeID() << std::endl;
     }
+}
+
+void tsp_dp::output() {
+    p -> output_file(solution_list_dp, 0, exe_time);
 }
 

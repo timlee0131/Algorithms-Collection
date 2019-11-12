@@ -8,7 +8,7 @@
 
 #include "tsp_interface.h"
 // #include "file_io.h"
-#include "parse_process.h"
+#include "pp_singleton.h"
 #include "tsp_node.h"
 
 #include <vector>
@@ -22,12 +22,15 @@ private:
     std::vector<tsp_node> tsp_list;
     std::vector<tsp_node> solution_list;
     int size;   //number of elements in 
+    pp_singleton* p;
+    double exe_time;
 public:
     //Constructor
     tsp_n();
     
     //Pure virtual implementations
     virtual void run_tsp();
+    virtual void display();
 
     //Naive Brute Force functions
     void brute_force_wrap();
@@ -39,7 +42,7 @@ public:
     //Utility functions
     double euclidian_distance();
     double euclidian_distance(tsp_node, tsp_node);
-    virtual void display();
+    void output();
 };
 
 #endif

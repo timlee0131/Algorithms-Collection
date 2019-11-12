@@ -8,7 +8,7 @@
 
 #include "tsp_interface.h"
 // #include "file_io.h"
-#include "parse_process.h"
+#include "pp_singleton.h"
 #include "tsp_node.h"
 
 #include <vector>
@@ -29,12 +29,15 @@ private:
 
     double min_tour_cost = 9999999;
     bool ran_solver = false;
+    pp_singleton* p;
+    double exe_time;
 public:
     //Constructor
     tsp_dp();
     
     //Pure virtual implementations
     virtual void run_tsp();
+    virtual void display();
 
     //DP functions
     void fill_distance();
@@ -49,8 +52,8 @@ public:
     //Utility functions
     double euclidian_distance();
     double euclidian_distance(tsp_node, tsp_node);
-    virtual void display();
     void display_dp();
+    void output();
 };
 
 #endif

@@ -34,9 +34,19 @@ void parse_process::load(char* filename) {
     }   //end while
 }
 
-void parse_process::output(char* filename) {
-    //Implement output() with a virtual proxy?
-    std::cout << "output function under construction" << std::endl;
+void parse_process::output(std::ofstream& write, std::vector<tsp_node> solution_list_dp, int flag, double exe_time) {
+    if(flag == 0)
+        write << "DP: ";
+    else if(flag == 1)
+        write << "Naive: ";
+    for(int i = 0; i < solution_list_dp.size(); i++) {
+        if(i != solution_list_dp.size() - 1)
+            write << solution_list_dp[i].get_nodeID() << " -> ";
+        else {
+            write << solution_list_dp[i].get_nodeID() << "\tTime(sec): " << exe_time << std::endl;
+        }
+    }
+    
 }
 
 std::vector<tsp_node> parse_process::return_it() {

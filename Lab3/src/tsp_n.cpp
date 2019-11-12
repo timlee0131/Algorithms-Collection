@@ -1,18 +1,24 @@
 #include "tsp_n.h"
+#include <chrono>
 
 const int DIST_MAX = 9999999;
 
 tsp_n::tsp_n() {
-    //Constructor for TSP class. Take in parse_process
     char* input = "datafiles/positions.txt";
-    file_io* pp = new parse_process();
-    pp -> load(input);
-    tsp_list = pp -> return_it();
-    size = pp -> return_it().size();
+    p = pp_singleton::pp_instance(input);
+    tsp_list = p -> return_interface() -> return_it();
+
+    size = tsp_list.size();
 }
 
 void tsp_n::run_tsp() {
+    auto start_time = std::chrono::high_resolution_clock::now();
     brute_force_wrap();
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::cout << "Execution time for Naive TSP with size " << size << " : " << std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    std::cout  << " seconds."<< std::endl;
+    exe_time = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time).count();
+    output();
 }
 
 void tsp_n::setup() {
@@ -64,6 +70,7 @@ void tsp_n::brute_force_wrap() {
 
     brute_force(best_path, min_dist, size);
     copy_list(best_path, solution_list);
+    solution_list.push_back(best_path[0]);
 
     return;
 }
@@ -75,7 +82,6 @@ void tsp_n::brute_force(std::vector<tsp_node>& best_path, int min_dist, int node
         current_dist = euclidian_distance();
         if(current_dist < min_dist) {
             min_dist = current_dist;
-            std::cout << "min dist: " << min_dist << std::endl;
             copy_list(solution_list, best_path);
         }
         
@@ -117,4 +123,8 @@ void tsp_n::display() {
         else
             std::cout << solution_list[i].get_nodeID() << std::endl;
     }
+}
+
+void tsp_n::output() {
+    p ->output_file(solution_list, 1, exe_time);
 }
