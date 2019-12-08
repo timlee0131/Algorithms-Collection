@@ -41,6 +41,11 @@ double tsp_node::dist(tsp_node& node) {
 } 
 
 bool operator<(const tsp_node& n1, const tsp_node& n2) {
-    if(n1.nodeID < n2.nodeID)     return true;
-    else                            return false;
+    if(n1.nodeID < n2.nodeID)   return true;
+    else                        return false;
+}
+
+bool operator==(const tsp_node& n1, const tsp_node& n2) {
+    if(n1.nodeID == n2.nodeID)  return true;
+    else                        return false;
 }

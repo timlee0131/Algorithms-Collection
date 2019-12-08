@@ -6,7 +6,8 @@
 //#include "tsp.h"
 
 int main () {
-    char* input = "datafiles/positions.txt";    //When testing against private list of nodes, change this value.
+    srand(time(NULL));
+    char* input = "datafiles/largePositions.txt";    //When testing against private list of nodes, change this value.
     tsp_interface* k = new tsp_ga(input);
     // k -> run_tsp();
     // k -> display();

@@ -46,7 +46,8 @@ public:
 
     void permutate();
 
-    std::pair<std::vector<tsp_node>, double>& breed(std::pair<std::vector<tsp_node>, double>&, std::pair<std::vector<tsp_node>, double>&);
+    std::pair<std::vector<tsp_node>, double> breed(std::pair<std::vector<tsp_node>, double>&, std::pair<std::vector<tsp_node>, double>&);
+    void mutate(std::pair<std::vector<tsp_node>, double>&);
 
     bool compare(const std::pair<std::vector<tsp_node>,double>&, const std::pair<std::vector<tsp_node>,double>&);
 

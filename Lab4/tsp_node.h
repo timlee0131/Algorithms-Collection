@@ -21,6 +21,7 @@ public:
     double dist(tsp_node&);
 
     friend bool operator < (const tsp_node&, const tsp_node&);
+    friend bool operator == (const tsp_node&, const tsp_node&);
 };
 
 #endif
