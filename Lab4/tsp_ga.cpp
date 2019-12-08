@@ -35,13 +35,12 @@ tsp_ga::tsp_ga(char* input) {
     // for(int i = 0; i < subset_test.size(); i++) {
     //     std::cout << subset_test[i] << std::endl;
     // }
-    ga_engine();
 }
 
 //Pure virtual functions.
 
 void tsp_ga::run_tsp() {
-
+    ga_engine();
 }
 
 void tsp_ga::display() {
@@ -53,33 +52,19 @@ void tsp_ga::display() {
 void tsp_ga::ga_engine() {
     //Repeat all the processes, rank the routes in current gen using rankRoutes(). 
     //Run as many generations as needed to find the best path.
-    std::chrono::high_resolution_clock::time_point s1 = std::chrono::high_resolution_clock::now();
+    std::chrono::high_resolution_clock::time_point s = std::chrono::high_resolution_clock::now();
     ga_initialize();
-    std::chrono::high_resolution_clock::time_point e1 = std::chrono::high_resolution_clock::now();
-    auto duration1 = std::chrono::duration_cast<std::chrono::microseconds>(e1-s1).count();
-    std::cout << "initialization complete: " << duration1 << " ms" << std::endl;
 
     for(int i = 0; i < 250000; i++) {
-        std::chrono::high_resolution_clock::time_point s2 = std::chrono::high_resolution_clock::now();
         ga_selection();
-        std::chrono::high_resolution_clock::time_point e2 = std::chrono::high_resolution_clock::now();
-        auto duration2 = std::chrono::duration_cast<std::chrono::microseconds>(e2-s2).count();
-        std::cout << "selection complete: " << duration2 << " ms" << std::endl;
-        std::chrono::high_resolution_clock::time_point s3 = std::chrono::high_resolution_clock::now();
         ga_crossbreed();
-        std::chrono::high_resolution_clock::time_point e3 = std::chrono::high_resolution_clock::now();
-        auto duration3 = std::chrono::duration_cast<std::chrono::microseconds>(e3-s3).count();
-        std::cout << "crossbreed complete: " << duration3 << " ms" << std::endl;
-        std::chrono::high_resolution_clock::time_point s4 = std::chrono::high_resolution_clock::now();
         ga_mutate();
-        std::chrono::high_resolution_clock::time_point e4 = std::chrono::high_resolution_clock::now();
-        auto duration4 = std::chrono::duration_cast<std::chrono::microseconds>(e4-s4).count();
-        std::cout << "mutation complete: " << duration4 << " ms" << std::endl;
 
         for(int j = 0; j < next_gen_list.size(); j++) {
             double fitness = euclidian_distance(next_gen_list[j].first);
             next_gen_list[j].second = fitness;
         }
+        permutated_list.clear();
         permutated_list = next_gen_list;
         next_gen_list.clear();
         selected_list.clear();
@@ -92,20 +77,20 @@ void tsp_ga::ga_engine() {
         //     std::cout << std::endl;
         // }
     }
+    std::chrono::high_resolution_clock::time_point e = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(e-s).count();
+    std::cout << "execution time: " << duration << std::endl;
 
-    std::cout << "solution list" << std::endl;
-    for(int i = 0; i < solution_list.size(); i++) {
-        for(int j = 0; j < solution_list[i].first.size(); j++) {
-            std::cout << solution_list[i].first[j].get_nodeID() << " ";
-        }
-    }
+    std::cout << "solution list" << " ";
+
+    for(int j = 0; j < solution_list[0].first.size(); j++) {
+        std::cout << solution_list[0].first[j].get_nodeID() << " ";
+    }   std::cout << std::endl;
 }
 
 void tsp_ga::ga_initialize() {
     //Create population -> all possible routes or optimize by cutting off this process.
-    std::cout << "before permutate" << std::endl;
     permutate();
-    std::cout << "after permutate" << std::endl;
 
     //Determine fitness, rank each individual(chromosome)
     //Output will be an ordered list with the routeID and each associated fitness score
@@ -114,12 +99,8 @@ void tsp_ga::ga_initialize() {
         permutated_list[i].second = fitness;
     }
 
-    std::cout << "after calculating fitness" << std::endl; 
-
     //Sorting the population by fitness
     std::sort(permutated_list.begin(), permutated_list.end(), [this] (std::pair<std::vector<tsp_node>,double> a, std::pair<std::vector<tsp_node>,double> b) {return compare(a, b);});
-
-    std::cout << "after the sort" << std::endl;
 }
 
 void tsp_ga::ga_selection() {
@@ -147,13 +128,13 @@ void tsp_ga::ga_crossbreed() {
         next_gen_list.push_back(breed(selected_list[start], selected_list[final]));
     }
     
-    // for(int i = 0; i < next_gen_list.size(); i++) {
-    //     std::cout << "generation " << i << ": ";
-    //     for(int j = 0; j < next_gen_list[i].first.size(); j++) {
-    //         std::cout << next_gen_list[i].first[j].get_nodeID() << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
+    for(int i = 0; i < next_gen_list.size(); i++) {
+        std::cout << "generation " << i << ": ";
+        for(int j = 0; j < next_gen_list[i].first.size(); j++) {
+            std::cout << next_gen_list[i].first[j].get_nodeID() << " ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 void tsp_ga::ga_mutate() {
@@ -207,14 +188,12 @@ std::pair<std::vector<tsp_node>, double> tsp_ga::breed(std::pair<std::vector<tsp
     std::pair<std::vector<tsp_node>,double> child;
     int size = gene1.first.size();
 
-    int r_start = rand() % (size/2);
-    int r_end = r_start + (size/2);
+    int r_start = rand() % (size);
+    int r_end = r_start + (size);
 
     std::vector<tsp_node>::iterator it = gene1.first.begin();
-    std::vector<tsp_node>::iterator it2 = gene1.first.begin();
-    std::vector<tsp_node>::iterator it3 = gene1.first.begin();
 
-    for(int i = r_start; i <= r_end; i++) {
+    for(int i = 0; i <= size / 3; i++) {
         child.first.push_back(gene1.first[i]);
     }
     for(int i = 0; i < gene2.first.size(); i++) {
