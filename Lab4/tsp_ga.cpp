@@ -12,29 +12,6 @@ tsp_ga::tsp_ga(char* input) {
     size = tsp_list.size();
 
     fill_distance();
-
-    //weight distribution matrix
-    // for(int i = 0; i < size; i++) {
-    //     for(int j = 0; j < size; j++) {
-    //         std::cout << distance[i][j] << "\t";
-    //     }   std::cout << std::endl;
-    // }
-
-    // permutate();
-    // std::cout << "permutated list test" << std::endl;
-    // for(int i = 0; i < permutated_list.size(); i++) {
-    //     for(int j = 0; j < permutated_list[i].size(); j++) {
-    //         std::cout << permutated_list[i][j].get_nodeID() << " ";
-    //     }   std::cout << std::endl;
-    // }
-    // std::cout << std::endl;
-
-    //dead code
-    // std::vector<int> subset_test = combinations(5, size);
-    // std::cout << "size: " << subset_test.size() << std::endl;
-    // for(int i = 0; i < subset_test.size(); i++) {
-    //     std::cout << subset_test[i] << std::endl;
-    // }
 }
 
 //Pure virtual functions.
@@ -128,13 +105,9 @@ void tsp_ga::ga_crossbreed() {
         next_gen_list.push_back(breed(selected_list[start], selected_list[final]));
     }
     
-    for(int i = 0; i < next_gen_list.size(); i++) {
-        std::cout << "generation " << i << ": ";
-        for(int j = 0; j < next_gen_list[i].first.size(); j++) {
-            std::cout << next_gen_list[i].first[j].get_nodeID() << " ";
-        }
-        std::cout << std::endl;
-    }
+    for(int i = 0; i < selected_list[0].first.size(); i++) {
+        std::cout << selected_list[0].first[i].get_nodeID() << " ";
+    }   std::cout << "< " << selected_list[0].second << " >" << std::endl;
 }
 
 void tsp_ga::ga_mutate() {

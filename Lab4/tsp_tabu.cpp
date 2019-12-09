@@ -23,7 +23,7 @@ void tsp_tabu::tabu_engine() {
     std::pair<std::vector<tsp_node>,double> best_candidate = permutated_list[0];
     tabu_list.push_back(permutated_list[0]);
     int i = 0;
-    while(i++ < 1000) {
+    while(i++ < 1000000) {
         std::vector<std::pair<std::vector<tsp_node>, double>> sNeighbhorhood = select_neighbor(best_candidate);
         for(int i = 0; i < sNeighbhorhood.size(); i++) {    
             std::pair<std::vector<tsp_node>, double> sCandidate = sNeighbhorhood[0];
