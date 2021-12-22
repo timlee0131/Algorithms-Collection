@@ -1,4 +1,4 @@
-# CS 3353 Code #
+# Algorithms Collection #
 
 ***This repository contains 4 separate labs completed for CS3353 Algorithms class.***
 
